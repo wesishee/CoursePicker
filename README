@@ -7,9 +7,13 @@ Created in Eclipse that connects to a SQL database of courses, divided by what r
   --User is able to pick from a list of UGA requirements and get a list of all available courses that meet the selected requirements;
   --User has a graphical representation of their weekly schedule, created on the client side using the HTML 5 “Canvas” element and drawn using JavaScript.
   --User is able to add and remove courses from the schedule;
-	--Application able to detect when the user selects a course that has a time conflict with a course that is already on the schedule, and resolves the conflict by the option of not adding the new course or by removing the old course.
+  --Application able to detect when the user selects a course that has a time conflict with a course that is already on the schedule, and resolves the conflict by the option of not adding the new course or by removing the old course.
 
 
-Compiled through Eclipse.
-
-Tested by uploading to personal VM with mySQL already full of proper tables containing CV files of courses and requirements.
+Compile:
+	through Eclipse.
+	
+Run:
+	Tested by uploading to personal VM with mySQL already full of proper tables containing CV files of courses and requirements.
+	
+	Code Broken; No longer have access to personal VM with mySQL (picker.jpg shows view when operational).
