@@ -1,0 +1,42 @@
+<project name="CoursePicker" default="deploy">
+
+<target name="compile">
+  <javac srcdir="src"
+	  destdir="classes"
+	  includeAntRuntime="no">
+	  <classpath>
+		<pathelement location="/opt/tomcat/lib/servlet-api.jar"/>
+	  </classpath>
+  </javac>
+</target>
+
+<target name="test_compile" depends="compile">
+  <javac srcdir="test_src"
+	  destdir="test_classes" >
+    <classpath>
+      <pathelement location="classes"/>
+      <pathelement location="/urs/share/java/junit4.jar"/>
+    </classpath>
+  </javac>
+</target>
+
+<target name="test" depends="test_compile">
+  <junit haltonfailure="on">
+    <classpath>
+      <pathelement location="classes"/>
+      <pathelement location="test_classes"/>
+      <pathelement location="/opt/tomcat/lib/mysql-connector-java-5.1.22-bin.jar"/>
+    </classpath>
+    <formatter type="plain" usefile="false"/>
+    <test name="test.HelperTest"/>
+  </junit>
+</target>
+
+<target name="deploy" depends="test">
+  <war destfile="CoursePicker.war" basedir="web" webxml="web.xml" >
+    <classes dir="classes" />
+  </war>
+  <echo message="TODO: copy to webapps folder" />
+</target>
+
+</project>
