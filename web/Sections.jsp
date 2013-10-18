@@ -1,6 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<!-- @author Wes Ishee
-@author Kim Bradley -->
+<!-- @author Wes Ishee -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -15,14 +14,14 @@ function reqRefresh(sel_req) {
     refresh.req.value = sel_req;
     refresh.submit();
 }
-//@author: Kim Bradley
+
 //submites to controller with correct course numbers of the selected prefix
 function pfxRefresh(sel_pfx) {
 	var refresh = document.getElementById("refresh_form");
 	refresh.pfx.value = sel_pfx;
     refresh.submit();
 }
-//@author: Kim Bradley
+
 //submits to controller with selected course number
 function crsNoRefresh(sel_crsNo) {
 	var refresh = document.getElementById("refresh_form");
@@ -40,7 +39,7 @@ function deleteRow(row_index,row_call_no) {
     del_form.submit();
 }
 
-//@author Kim Bradley
+
 //deletes all rows and submits to Schedule
 function clearSchedule() {
 	var r = confirm("Are you sure you want to clear all courses from schedule?");
@@ -69,7 +68,6 @@ function clearSchedule() {
 		
 	<!-- Table displaying user selected requirement, department(prefix),
 	and course numbers.
-	@author Kim Bradley
 	@author Wes Ishee -->
 	<table id="table">
 	<tr id="requirement"><td>Requirement: </td>
@@ -85,7 +83,7 @@ function clearSchedule() {
 	</tr></table>
 	
 	<!-- Table displaying all sections for user selected prefix and course number.
-	@author Kim Bradley -->
+	@author Wes Ishee -->
 	<table id="table_sections" class=.visible border="1">
 		<tr>
 			<th></th>
@@ -134,8 +132,7 @@ function clearSchedule() {
 	
 	<!-- Table containing the schedule.  Will be updated whenever a new course is added
 	or deleted.
-	@author Wes Ishee
-	@author Kim Bradley -->
+	@author Wes Ishee -->
 	<table id="table_schedule" class=.visible border="1"bordercolor="grey">
 		<tr>
 			<th style="color:grey;"></th>
