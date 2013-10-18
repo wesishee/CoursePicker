@@ -8,21 +8,21 @@
 <title>UGA Course Picker</title>
 
 <script type="text/javascript">
-	//@author: Kim Bradley
+
 	//submits to controller with correct prefixes of the selected requirement
 	function reqRefresh(sel_req) {
 		var refresh = document.getElementById("refresh_form");
         refresh.req.value = sel_req;
         refresh.submit();
 	}
-	//@author: Kim Bradley
+
 	//submites to controller with correct course numbers of the selected prefix
 	function pfxRefresh(sel_pfx) {
 		var refresh = document.getElementById("refresh_form");
 		refresh.pfx.value = sel_pfx;
         refresh.submit();
 	}
-	//@author: Kim Bradley
+
 	//submits to controller with selected course number
 	function crsNoRefresh(sel_crsNo) {
 		var refresh = document.getElementById("refresh_form");
@@ -40,7 +40,7 @@
         del_form.submit();
 	}
 	
-	//@author Kim Bradley
+
 	//deletes all rows and submits to Schedule
 	function clearSchedule() {
 		var r = confirm("Are you sure you want to clear all courses from schedule?");
@@ -69,7 +69,7 @@
 		
 	<!-- Table displaying dropdown options of requirement, department(prefix),
 	and course numbers. Will be dynamically generated when options are selected.
-	@author Kim Bradley
+
 	@author Wes Ishee -->	
 	<table id="table">
 	<tr id="requirement"><td>Requirement: </td>
@@ -128,8 +128,7 @@
 		
 	<!-- Table containing the schedule.  Will be updated whenever a new course is added
 	or deleted.
-	@author Wes Ishee
-	@author Kim Bradley -->
+	@author Wes Ishee -->
 	<table id="table_schedule" class=.visible border="1">
 		<tr>
 			<th></th>
