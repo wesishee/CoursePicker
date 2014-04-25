@@ -7,7 +7,7 @@
 <title>UGA Course Picker</title>
 
 <script type="text/javascript">
-//@author: Kim Bradley
+//@author: Wes Ishee
 //submits to controller with correct prefixes of the selected requirement
 function reqRefresh(sel_req) {
 	var refresh = document.getElementById("refresh_form");
@@ -64,7 +64,7 @@ function clearSchedule() {
 		<input type="hidden" name="req"/>
 		<input type="hidden" name="pfx"/>
 		<input type="hidden" name="crsNo"/>
-		</form>
+	</form>
 		
 	<!-- Table displaying user selected requirement, department(prefix),
 	and course numbers.
